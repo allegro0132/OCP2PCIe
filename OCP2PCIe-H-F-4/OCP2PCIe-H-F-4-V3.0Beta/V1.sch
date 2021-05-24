@@ -1652,43 +1652,21 @@ REFCLK+
 Text GLabel 7950 4900 0    50   Input ~ 0
 REFCLK-
 Text GLabel 7950 4600 0    50   Input ~ 0
-OE1
+OE0
 Text GLabel 10450 5600 1    50   Input ~ 0
 OE0
 Text GLabel 10650 5600 1    50   Input ~ 0
 OE1
 Text GLabel 9050 5200 2    50   Input ~ 0
-OE0
-$Comp
-L power:GND #PWR0204
-U 1 1 60B6B584
-P 10450 6200
-F 0 "#PWR0204" H 10450 5950 50  0001 C CNN
-F 1 "GND" H 10455 6027 50  0000 C CNN
-F 2 "" H 10450 6200 50  0001 C CNN
-F 3 "" H 10450 6200 50  0001 C CNN
-	1    10450 6200
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR0205
-U 1 1 60B6BC15
-P 10650 6200
-F 0 "#PWR0205" H 10650 5950 50  0001 C CNN
-F 1 "GND" H 10655 6027 50  0000 C CNN
-F 2 "" H 10650 6200 50  0001 C CNN
-F 3 "" H 10650 6200 50  0001 C CNN
-	1    10650 6200
-	1    0    0    -1  
-$EndComp
+OE1
 Text GLabel 10450 4450 2    50   Input ~ 0
-REFCLK1+
-Text GLabel 10450 4350 2    50   Input ~ 0
-REFCLK1-
-Text GLabel 10450 4850 2    50   Input ~ 0
 REFCLK0+
-Text GLabel 10450 4750 2    50   Input ~ 0
+Text GLabel 10450 4350 2    50   Input ~ 0
 REFCLK0-
+Text GLabel 10450 4850 2    50   Input ~ 0
+REFCLK1+
+Text GLabel 10450 4750 2    50   Input ~ 0
+REFCLK1-
 NoConn ~ 9050 5750
 NoConn ~ 9050 5900
 NoConn ~ 7950 5450
@@ -1929,23 +1907,50 @@ F 3 "~" H 10300 4450 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 Text GLabel 10150 4350 0    50   Input ~ 0
-DIF1_N
+DIF0_N
 Text GLabel 10150 4450 0    50   Input ~ 0
-DIF1_P
+DIF0_P
 Text GLabel 9050 4600 2    50   Input ~ 0
-DIF1_N
+DIF0_N
 Text GLabel 9050 4750 2    50   Input ~ 0
-DIF1_P
+DIF0_P
 Text GLabel 10150 4750 0    50   Input ~ 0
-DIF0_N
+DIF1_N
 Text GLabel 10150 4850 0    50   Input ~ 0
-DIF0_P
+DIF1_P
 Text GLabel 9050 5300 2    50   Input ~ 0
-DIF0_N
+DIF1_N
 Text GLabel 9050 5450 2    50   Input ~ 0
-DIF0_P
+DIF1_P
 NoConn ~ 1750 2850
 NoConn ~ 1750 2950
 NoConn ~ 5450 2950
 NoConn ~ 5450 3050
+$Comp
+L Device:R R5
+U 1 1 60AAEBA0
+P 9900 6200
+F 0 "R5" V 9693 6200 50  0000 C CNN
+F 1 "100ohm" V 9784 6200 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 9830 6200 50  0001 C CNN
+F 3 "~" H 9900 6200 50  0001 C CNN
+	1    9900 6200
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 60AAF187
+P 9750 6200
+F 0 "#PWR?" H 9750 5950 50  0001 C CNN
+F 1 "GND" H 9755 6027 50  0000 C CNN
+F 2 "" H 9750 6200 50  0001 C CNN
+F 3 "" H 9750 6200 50  0001 C CNN
+	1    9750 6200
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	10050 6200 10450 6200
+Connection ~ 10450 6200
+Wire Wire Line
+	10450 6200 10650 6200
 $EndSCHEMATC
